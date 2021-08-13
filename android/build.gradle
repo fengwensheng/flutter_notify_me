@@ -1,0 +1,40 @@
+group 'com.example.flutter_notify_me'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+
+    dependencies {
+        implementation 'androidx.annotation:annotation:1.2.0'
+//        implementation files('/Users/vincentfeng/Development/sdk/flutter/bin/cache/artifacts/engine/android-x64/flutter.jar')
+    }
+
+}
